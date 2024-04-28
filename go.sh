@@ -6,7 +6,6 @@ pip install pybind11 mypy
 
 g++ \
 	-shared \
-	-std=c++11 \
 	-fPIC \
 	$(python3 -m pybind11 --includes) \
 	py2cpp.cpp \

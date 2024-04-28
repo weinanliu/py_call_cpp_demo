@@ -13,7 +13,7 @@ print(add(1, 2))
 
 
 one_dict = {"host0_cuda0": 1, "host0_cuda1": 2}
-py2cpp.printDict(one_dict)
+print(py2cpp.printDict(one_dict))
 
 class A:
     def __init__(self):

@@ -26,10 +26,15 @@ private:
 		std::vector<int> s;
 };
 
-void printDict(pybind11::dict dict) {
+auto printDict(pybind11::dict dict) {
     for (auto item : dict) {
         std::cout << item.first.cast<std::string>() << ": " << item.second.cast<int>() << std::endl;
     }
+
+    pybind11::dict ret;
+    ret["1"] = 2;
+    ret["3"] = 5;
+    return ret;
 }
 
 void callback_pythonfun(pybind11::function fun) {
